@@ -3,11 +3,6 @@ import { comparison, questions, textForKeys } from "../data";
 import { Dropdown } from "../Dropdown";
 import "../style.css";
 
-const questionsOptions = questions.map((question) => ({
-  value: question.id,
-  label: question.question_text,
-}));
-
 export default function Comparison({
   data,
   keyName,
@@ -32,10 +27,12 @@ export default function Comparison({
     <div>
       <Dropdown
         key={questionKey}
-        options={questionsOptions}
+        options={questions}
         onChange={onChangeQuestion}
         dropdownName={questionKey}
         defaultValue={id}
+        labelKeyName="question_text"
+        valueKeyName="id"
       />
 
       {comparisonOptions?.length && (

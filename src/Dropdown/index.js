@@ -3,6 +3,8 @@ export const Dropdown = ({
   dropdownName,
   onChange,
   defaultValue,
+  labelKeyName = "",
+  valueKeyName = "",
 }) => {
   return (
     <div className="dropdown">
@@ -12,8 +14,8 @@ export const Dropdown = ({
         onChange={(e) => onChange(dropdownName, e.target.value)}
       >
         {options.map((option) => (
-          <option value={option.value || option}>
-            {option.label || option}
+          <option value={option[valueKeyName] || option}>
+            {option[labelKeyName] || option}
           </option>
         ))}
       </select>

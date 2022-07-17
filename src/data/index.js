@@ -131,10 +131,10 @@ export const questions = [
 
 export const expressions = [
   { label: "None", value: "DEFAULT_TRUE" },
-  { label: "SIMPLE_EXPRESSION", value: "SIMPLE_EXPRESSION" },
-  { label: "AND_EXPRESSION", value: "AND_EXPRESSION" },
-  { label: "OR_EXPRESSION", value: "OR_EXPRESSION" },
-  { label: "NOT_EXPRESSION", value: "NOT_EXPRESSION" },
+  { label: "SIMPLE_EXPRESSION", value: "SIMPLE_CONDITION" },
+  { label: "AND_EXPRESSION", value: "AND_CONDITION" },
+  { label: "OR_EXPRESSION", value: "OR_CONDITION" },
+  { label: "NOT_EXPRESSION", value: "NOT_CONDITION" },
 ];
 
 export const comparison = {
@@ -143,11 +143,11 @@ export const comparison = {
   RANGE_SELECTION: ["EQUAL"],
 };
 
-export const res = {
-  type: "AND_EXPRESSION",
+export const sampleData = {
+  type: "AND_CONDITION",
   expression: [
     {
-      type: "SIMPLE_EXPRESSION",
+      type: "SIMPLE_CONDITION",
       expression: {
         question: "62a6ef76f4b287a7cb206e23",
         question_text: "What is your gender",
@@ -156,10 +156,10 @@ export const res = {
       },
     },
     {
-      type: "OR_EXPRESSION",
+      type: "OR_CONDITION",
       expression: [
         {
-          type: "SIMPLE_EXPRESSION",
+          type: "SIMPLE_CONDITION",
           expression: {
             question: "62a6f7edbf6f5d81231ced51",
             question_text: "Do you buy online",
@@ -168,7 +168,7 @@ export const res = {
           },
         },
         {
-          type: "SIMPLE_EXPRESSION",
+          type: "SIMPLE_CONDITION",
           expression: {
             question: "62a6f7edbf6f5d81231ced52",
             question_text: "Would you consider buying online",
@@ -183,6 +183,7 @@ export const res = {
 
 export const textForKeys = {
   EQUAL: "IS",
+  NOT_EQUAL: "IS NOT",
   CAN_HAVE_CONTAINS: "CONTAINS",
   DOES_NOT_CONTAINS: "NOT CONTAINS",
   IS_EXACTLY: "IS EXACTLY",

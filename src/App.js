@@ -30,13 +30,13 @@ export default function App() {
     let expression;
 
     switch (value) {
-      case "SIMPLE_EXPRESSION":
+      case "SIMPLE_CONDITION":
         expression = getNextQuestion(nextQuestionId, setNextQuestionId);
         break;
 
-      case "AND_EXPRESSION":
-      case "OR_EXPRESSION":
-      case "NOT_EXPRESSION":
+      case "AND_CONDITION":
+      case "OR_CONDITION":
+      case "NOT_CONDITION":
         expression = [getDefaultExpression()];
         break;
 

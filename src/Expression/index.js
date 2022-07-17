@@ -19,15 +19,17 @@ export default function Expression({
     <div className="input-wrapper" key={keyName}>
       {!isEditable &&
       (data.type === "DEFAULT_TRUE" ||
-        data.type === "SIMPLE_EXPRESSION") ? null : (
+        data.type === "SIMPLE_CONDITION") ? null : (
         <div className="expression-wrapper">
           <Dropdown
             options={expressions}
             onChange={onChangeExpression}
             dropdownName={typeKey}
             defaultValue={data?.type}
+            valueKeyName="value"
+            labelKeyName="label"
           />
-          {data.type !== "DEFAULT_TRUE" && data.type !== "SIMPLE_EXPRESSION" && (
+          {data.type !== "DEFAULT_TRUE" && data.type !== "SIMPLE_CONDITION" && (
             <button
               className="add-btn"
               name={comparisonKey}
