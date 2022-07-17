@@ -44,6 +44,7 @@ export default function Comparison({
           options={comparisonOptions}
           onChange={onChange}
           dropdownName={comparisonKey}
+          defaultValue={data.comparison}
         />
       )}
 
@@ -53,6 +54,7 @@ export default function Comparison({
           options={valueOptions}
           onChange={onChange}
           dropdownName={valueKey}
+          defaultValue={data.value}
         />
       )}
     </div>
