@@ -26,6 +26,19 @@ export const questions = [
     ],
   },
   {
+    id: "62b300d7964ea3e2ee01af3b",
+    question_text: "What categories do you buy from online the most?",
+    question_type: "SINGLE_SELECT",
+    next_question_id: "62b300d1965ea3e2ee01af3a",
+    options: [
+      "Personal Care",
+      "Health and Welness",
+      "Beauty and Grooming",
+      "Child Care",
+      "Electronics",
+    ],
+  },,
+  {
     id: "62b300c3965ea3e2ee01af39",
     question_text: "What Categories that you would not consider buying online?",
     question_type: "MULTI_SELECT",
